@@ -18,6 +18,7 @@ function Home(props) {
                 </div>
                 <div className="add_to_cart">
                     <button type="button" onClick={()=>props.addToCartHandler({price:100,name:"samsung"})} className="btn">add to cart</button>
+                    <button type="button" onClick={()=>props.removeToCartHandler()} className="btn" style={{background:"black", color:"white"}}>remove to cart</button>
                 </div>
             </div>
           <div className="card">
@@ -30,6 +31,7 @@ function Home(props) {
                 </div>
                 <div className="add_to_cart">
                     <button type="button" onClick={()=>props.addToCartHandler({price:100,name:"Redmi"})} className="btn">add to cart</button>
+                    <button type="button" onClick={()=>props.removeToCartHandler()} className="btn" style={{background:"black", color:"white"}} >remove to cart</button>
                 </div>
             </div>
           </div>
