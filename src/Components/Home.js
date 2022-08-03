@@ -1,16 +1,12 @@
 import React from "react";
 
-function Home() {
+function Home(props) {
+    // console.log("home from ",props)
     var img2 = "https://specifications-pro.com/wp-content/uploads/2020/06/Xiaomi-Redmi-9C-600x600.jpg"
     return (
         <>
          
-            <header>
-                <div>Web logo</div>
-                <div> <img src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/40C057/external-add-to-cart-essential-collection-bearicons-gradient-bearicons.png"/> <span>55</span></div>
-            </header>
-
-
+         
           <div className="container">
           <div className="card">
                 <div className="image-wrapper item">
@@ -21,7 +17,7 @@ function Home() {
                     <h4>$100</h4>
                 </div>
                 <div className="add_to_cart">
-                    <button type="button" className="btn">add to cart</button>
+                    <button type="button" onClick={()=>props.addToCartHandler({price:100,name:"samsung"})} className="btn">add to cart</button>
                 </div>
             </div>
           <div className="card">
@@ -33,7 +29,7 @@ function Home() {
                     <h4>$1200</h4>
                 </div>
                 <div className="add_to_cart">
-                    <button type="button" className="btn">add to cart</button>
+                    <button type="button" onClick={()=>props.addToCartHandler({price:100,name:"Redmi"})} className="btn">add to cart</button>
                 </div>
             </div>
           </div>
